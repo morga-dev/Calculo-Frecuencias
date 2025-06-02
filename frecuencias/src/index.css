@@ -1,0 +1,283 @@
+@import "tailwindcss";
+
+:root {
+  --primary: #8B5CF6;
+  --primary-dark: #7C3AED;
+  --background: #1F1F2B;
+  --surface: #2D2D3B;
+  --text: #E2E8F0;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: var(--background);
+  color: var(--text);
+}
+
+/* Estilo base para inputs */
+input {
+  background-color: var(--surface);
+  color: var(--text);
+  border-color: var(--primary);
+}
+
+input:focus {
+  outline: 2px solid var(--primary);
+  outline-offset: -2px;
+}
+
+/* Estilo base para tabelas */
+table {
+  background-color: var(--surface);
+  border-color: var(--primary);
+}
+
+th {
+  background-color: var(--primary-dark);
+  color: white;
+}
+
+tr:nth-child(even) {
+  background-color: rgba(139, 92, 246, 0.1);
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+/* Estilos base para todos los botones */
+button {
+  border-radius: 0.5rem;
+  border: 1px solid transparent;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  font-weight: 500;
+  font-family: inherit;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Botón primario (morado) */
+.btn-primary {
+  background-color: var(--primary);
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-dark);
+  transform: scale(1.05);
+}
+
+.btn-primary:active {
+  transform: scale(0.95);
+}
+
+/* Botón secundario (verde - Excel) */
+.btn-excel {
+  background-color: #4caf50;
+  color: white;
+}
+
+.btn-excel:hover {
+  background-color: #43a047;
+  transform: scale(1.05);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.btn-excel:active {
+  background-color: #388e3c;
+  transform: scale(0.95);
+}
+
+/* Botón terciario (azul) */
+.btn-tertiary {
+  background-color: #3B82F6;
+  color: white;
+}
+
+.btn-tertiary:hover {
+  background-color: #2563EB;
+  transform: scale(1.05);
+}
+
+.btn-tertiary:active {
+  transform: scale(0.95);
+}
+
+/* Botón fantasma (transparente con borde) */
+.btn-ghost {
+  background-color: transparent;
+  border: 1px solid var(--primary);
+  color: var(--primary);
+}
+
+.btn-ghost:hover {
+  background-color: var(--primary);
+  color: white;
+}
+
+/* Botón de retroceso */
+.btn-back {
+  background-color: transparent;
+  color: var(--primary);
+  padding: 0.25rem 0.5rem;
+}
+
+.btn-back:hover {
+  color: var(--primary-dark);
+  transform: translateX(-4px);
+}
+
+/* Añadir al final del archivo */
+
+.animate-fade-in {
+  animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 20s linear infinite;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #2D2D3B;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #7152EC;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #1C64F1;
+} 
+
+.clip-hex {
+  clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+}
+
+/* Mejora del brillo para el hexágono */
+@keyframes pulse-hex {
+  0%, 100% { 
+    opacity: 0.3;
+    transform: scale(1);
+  }
+  50% { 
+    opacity: 0.4;
+    transform: scale(1.05);
+  }
+}
+
+.animate-pulse-hex {
+  animation: pulse-hex 3s ease-in-out infinite;
+}
+
+/* Estilos para el botón de exportar a Excel */
+.bg-green-600 {
+  background-color: #4caf50;
+}
+
+.hover\:bg-green-500:hover {
+  background-color: #43a047;
+}
+
+.text-white {
+  color: #ffffff;
+}
+
+.px-4 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.py-2 {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.rounded-lg {
+  border-radius: 0.5rem;
+}
+
+.flex {
+  display: flex;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.gap-2 {
+  gap: 0.5rem;
+}
+
+.transition-all {
+  transition: all 0.3s ease-in-out;
+}
+
+.duration-300 {
+  transition-duration: 300ms;
+}
+
+.ease-in-out {
+  transition-timing-function: ease-in-out;
+}
+
+.transform {
+  transform: translateZ(0);
+}
+
+.hover\:scale-105:hover {
+  transform: scale(1.05);
+}
+
+.hover\:shadow-lg:hover {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.active\:bg-green-700:active {
+  background-color: #388e3c;
+}
+
+.active\:scale-95:active {
+  transform: scale(0.95);
+}
