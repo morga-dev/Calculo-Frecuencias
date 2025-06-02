@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { BiTable } from 'react-icons/bi';
 import { IoStatsChartSharp } from 'react-icons/io5';
 import { BsGraphUp } from 'react-icons/bs';
+import logoImg from '../assets/logo.png';
 
 export default function Header() {
   const featureItems = [
@@ -110,7 +111,7 @@ export default function Header() {
               {/* Logo con fondo y backdrop blur */}
               <div className="w-full h-full bg-[#1F1F2B] rounded-full relative overflow-hidden">
                 <motion.img 
-                  src="/logo.png" 
+                  src={logoImg} 
                   alt="FrequencysLab Logo" 
                   className="w-full h-full object-contain p-0"
                   whileHover={{ scale: 1.1 }}
